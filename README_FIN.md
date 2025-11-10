@@ -18,16 +18,14 @@ Using the above models, the system periodically generates market data snapshots 
 
 Stock price fluctuations are simulated using the Geometric Brownian Motion model, whose core idea is: the return rate of stock prices follows a normal distribution, and price changes are proportional to the current price.
 
-### Mathematical Formula
-Price change rate formula:
-$$
-\frac{\Delta S}{S} = \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}
-$$
+## Mathematical Formula
+### Price Change Rate Formula
+The formula for the price change rate is as follows:
+$$\frac{\Delta S}{S} = \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}$$
 
-Derived, the stock price at time $t$ is:
-$$
-S_t = S_{t-1} \cdot \left(1 + \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}\right)
-$$
+### Derived Stock Price Formula at Time \(t\)
+From the above price change rate formula, we can derive the stock price at time \(t\), which is expressed as:
+$$S_t = S_{t-1} \cdot \left(1 + \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}\right)$$
 
 ### Parameter Explanation
 | Parameter | Meaning | Value/Source |

@@ -17,16 +17,14 @@
 
 股票价格波动采用几何布朗运动模型模拟，其核心思想是：股票价格的收益率服从正态分布，价格变化与当前价格成正比。
 
-### 数学公式
-价格变化率公式：
-$$
-\frac{\Delta S}{S} = \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}
-$$
+## 数学公式
+### 价格变动率公式
+股票价格变动率的计算公式如下：
+$$\frac{\Delta S}{S} = \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}$$
 
-推导后，t时刻的股票价格为：
-$$
-S_t = S_{t-1} \cdot \left(1 + \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}\right)
-$$
+### t时刻股票价格的推导公式
+由上述价格变动率公式可推导出t时刻的股票价格，其表达式为：
+$$S_t = S_{t-1} \cdot \left(1 + \mu \cdot \frac{\Delta t}{T_{year}} + \sigma \cdot \epsilon \cdot \sqrt{\frac{\Delta t}{T_{year}}}\right)$$
 
 ### 参数说明
 | 参数 | 含义 | 取值/来源 |
