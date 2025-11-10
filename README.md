@@ -42,7 +42,7 @@ The system adopts a microservice architecture, consisting of two core modules:
 ## Quick Start - Gradle (Not recommended - Environmental factors may cause build failure)
 
 ### Prerequisites
-- JDK 8
+- JDK Amazon Corretto 1.8.0_472
 - Gradle 8.5
 
 ### Startup Steps

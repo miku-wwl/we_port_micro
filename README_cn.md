@@ -46,7 +46,7 @@
 
 ### 环境要求
 
-- JDK 8
+- JDK Amazon Corretto 1.8.0_472
 - Gradle 8.5
 
 

@@ -12,3 +12,6 @@ docker-compose logs -f portfolio-receiver
 
 # 彻底停止并移除容器
 docker-compose down
+
+# 样例输出
+![alt text](docker-compose-output.png)
