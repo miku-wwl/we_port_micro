@@ -1,0 +1,44 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.weilai.portfolio.grpc.valuation";
+option java_outer_classname = "PortfolioValuationProto";
+
+package portfolio.valuation;
+
+// 持仓信息
+message PositionProto {
+  string ticker = 1;
+  int32 quantity = 2;
+  double price = 3;
+  double market_value = 4;
+}
+
+// 市场数据变化
+message MarketDataChangeProto {
+  string ticker = 1;
+  double price = 2;
+}
+
+// 投资组合估值消息
+message PortfolioValuationMessage {
+  repeated PositionProto positions = 1;
+  double total_nav = 2;
+  int64 timestamp = 3;
+  int32 update_count = 4;
+  repeated MarketDataChangeProto changed_market_data = 5;
+}
+
+// 响应消息
+message ValuationResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+// 估值服务定义
+service PortfolioValuationService {
+  // 发送估值结果
+  rpc SendValuation (PortfolioValuationMessage) returns (ValuationResponse);
+
+  // 流式发送估值结果
+  rpc StreamValuations (stream PortfolioValuationMessage) returns (ValuationResponse);
+}

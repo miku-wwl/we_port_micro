@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build:
+      context: ./portfolio
+      dockerfile: Dockerfile
+    container_name: portfolio-service
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - grpc.valuation.server.address=portfolio-receiver:50052
+    depends_on:
+      - portfolio-receiver
+    networks:
+      - grpc-network
+
+  portfolio-receiver:
+    build:
+      context: ./portfolio-receiver
+      dockerfile: Dockerfile
+    container_name: portfolio-receiver-service
+    ports:
+      - "8081:8081"
+      - "50052:50052"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - grpc.server.port=50052
+    networks:
+      - grpc-network
+
+networks:
+  grpc-network:
+    driver: bridge
