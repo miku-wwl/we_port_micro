@@ -46,7 +46,7 @@ The system adopts a microservice architecture, consisting of two core modules:
 
 ### Prerequisites
 - JDK Amazon Corretto 1.8.0_472
-- Gradle 8.5
+- Gradle 8.5 wrapper
 
 ### Startup Steps
 

@@ -47,7 +47,7 @@
 ### 环境要求
 
 - JDK Amazon Corretto 1.8.0_472
-- Gradle 8.5
+- Gradle 8.5 wrapper
 
 
 ### 启动步骤
