@@ -1,6 +1,6 @@
 ## Issue 1: Generated gRPC Code Fails to Work (Troubleshooting Time: 0.5 Hours)
 
-> 🌐 Chinese Version: [README_issue.md](README_issue.md)
+> 🌐 Chinese Version: [README_issue.md](README_issues_cn.md)
 
 ![alt text](image-issue1.png)
 
