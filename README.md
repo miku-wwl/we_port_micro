@@ -33,13 +33,13 @@ The system adopts a microservice architecture, consisting of two core modules:
 - Data Storage: H2 in-memory database (for storing static security information)
 - Build Tool: Gradle
 
-## Quick Start - docker
+## Quick Start - docker (Recommended)
 - Docker version 27.5.1
 - Docker Compose version v2.32.4
 > 📑 Docker  : [README_docker.md](README_docker.md)
 
 
-## Quick Start
+## Quick Start - Gradle (Not recommended - Environmental factors may cause build failure)
 
 ### Prerequisites
 - JDK 8

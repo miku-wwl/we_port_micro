@@ -41,9 +41,9 @@ public class PortfolioValuationServer extends PortfolioValuationServiceGrpc.Port
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 
-            log.info("接收估值更新 #{}", request.getUpdateCount());
+            log.info("Receive valuation updates #{}", request.getUpdateCount());
         } catch (Exception e) {
-            log.error("处理估值消息失败", e);
+            log.error("The processing of the valuation message failed", e);
             responseObserver.onError(e);
         }
     }

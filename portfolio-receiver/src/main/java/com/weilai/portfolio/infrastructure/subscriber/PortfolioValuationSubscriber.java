@@ -73,7 +73,7 @@ public class PortfolioValuationSubscriber {
 
     private void handleError(Throwable error) {
         System.err.println("======================================================");
-        System.err.println("估值异常：" + error.getMessage());
+        System.err.println("Abnormal valuation：" + error.getMessage());
         error.printStackTrace();
         System.err.println("======================================================");
         System.err.println();

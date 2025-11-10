@@ -36,13 +36,13 @@
 - **数据存储**：H2内存数据库（用于存储证券静态信息）
 - **构建工具**：Gradle
 
-## 快速开始 - docker
+## 快速开始 - docker (推荐)
 - Docker version 27.5.1
 - Docker Compose version v2.32.4
 > 📑 Docker  : [README_docker.md](README_docker.md)
 
 
-## 快速开始
+## 快速开始 - Gradle (不推荐-环境因素可能导致构建失败)
 
 ### 环境要求
 
